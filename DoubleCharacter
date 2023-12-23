@@ -1,0 +1,38 @@
+/*
+Write a Program to double the every Character of a String in order
+
+eg: 
+Input:
+Enter a String
+Java
+
+Output:
+JJaavvaa
+*/
+
+
+
+package String;
+import java.util.Scanner;
+public class StringDoubleCharacter 
+{
+	public String doubleChar(String str)
+	{
+		String mid = "";
+		for(int i=0;i<str.length();i++)
+		{
+			mid = mid + str.charAt(i)+str.charAt(i);
+		}
+		return mid;
+	}
+	public static void main(String[] args)
+	{
+		StringDoubleCharacter obj = new StringDoubleCharacter();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a String : ");
+		String s = sc.next();
+		String result = obj.doubleChar(s);
+		System.out.println(result);
+		sc.close();
+	}
+}
