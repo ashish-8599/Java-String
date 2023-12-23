@@ -1,0 +1,27 @@
+/*
+If the two Strings are Given "A" and "B" then the order of the result is "ABBA"
+*/
+
+
+
+
+import java.util.Scanner;
+public class StringAbbA 
+{
+	public String makeAbba(String a,String b)
+	{
+		return ("\"").concat(a).concat(b).concat(b).concat(a)+"\"";
+	}
+	public static void main(String[] args)
+	{
+		StringAbbA obj = new StringAbbA();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter First String :");
+		String first = sc.nextLine();
+		System.out.println("Enter Second String :");
+		String second = sc.nextLine();
+		String result = obj.makeAbba(first, second);
+		System.out.println(result);
+		sc.close();
+	}
+}
