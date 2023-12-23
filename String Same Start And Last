@@ -1,0 +1,51 @@
+/*
+Write a Program for that a String value will have to Start and End with same upto two character.
+
+eg:
+Input:
+Madam
+
+Output:
+Enter a String : 
+Madam
+First two Character of String is : 
+Ma
+Last two Character of the String is : 
+am
+true
+*/
+
+
+
+import java.util.Scanner;
+public class StringFirstLast 
+{
+	public boolean frontAgain(String str)
+	{
+		String a = "";
+		String b = "";
+		for(int i=0;i<2;i++)
+		{
+			a = a+str.charAt(i);
+		}
+		System.out.println("First two Character of String is : ");
+		System.out.println(a);
+		for(int i=str.length()-2;i<str.length();i++)
+		{
+			b = b+str.charAt(i);
+		}
+		System.out.println("Last two Character of the String is : ");
+		System.out.println(b);
+		return a.equalsIgnoreCase(b);
+	}
+	public static void main(String[] args)
+	{
+		StringFirstLast obj = new StringFirstLast();
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a String : ");
+		String s = sc.next();
+		boolean result = obj.frontAgain(s);
+		System.out.println(result);
+		sc.close();
+	}
+}
